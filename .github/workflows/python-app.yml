@@ -34,3 +34,7 @@ jobs:
     - name: Check Complexity Scores with radon
       run: |
         radon cc . -s
+    - name: Upload Scores
+      uses: actions/upload-artifact@v1
+      with:
+          name: code-coverage-report
